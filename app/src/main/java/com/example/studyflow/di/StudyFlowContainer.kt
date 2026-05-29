@@ -71,6 +71,7 @@ object StudyFlowContainer {
     fun taskViewModelFactory(): ViewModelProvider.Factory = factoryOf {
         TaskViewModel(
             getTasksUseCase = getTasksUseCase,
+            getCoursesUseCase = getCoursesUseCase,
             addTaskUseCase = addTaskUseCase,
             setTaskCompletedUseCase = setTaskCompletedUseCase,
         )
