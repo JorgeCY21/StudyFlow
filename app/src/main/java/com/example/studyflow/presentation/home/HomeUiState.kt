@@ -11,9 +11,11 @@ data class HomeUiState(
         focusGoal = "",
     ),
     val progressSummary: ProgressSummary = ProgressSummary(
+        totalHabits = 0,
         totalTasks = 0,
         completedTasks = 0,
         completedHabits = 0,
+        pendingHabits = 0,
         weeklyProgressPercent = 0,
         pendingTasks = 0,
     ),

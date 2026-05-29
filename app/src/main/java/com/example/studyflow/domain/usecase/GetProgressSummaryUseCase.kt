@@ -23,9 +23,11 @@ class GetProgressSummaryUseCase(
             val progressPercent = if (totalWorkItems == 0) 0 else (completedWorkItems * 100 / totalWorkItems)
 
             ProgressSummary(
+                totalHabits = habits.size,
                 totalTasks = tasks.size,
                 completedTasks = completedTasks,
                 completedHabits = completedHabits,
+                pendingHabits = habits.count { !it.completed },
                 weeklyProgressPercent = progressPercent,
                 pendingTasks = tasks.count { !it.completed },
             )

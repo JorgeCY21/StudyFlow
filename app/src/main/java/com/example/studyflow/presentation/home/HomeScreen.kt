@@ -78,6 +78,14 @@ fun HomeScreen(
         }
         item {
             AppStatCard(
+                title = "Hábitos por completar",
+                value = uiState.progressSummary.pendingHabits.toString(),
+                subtitle = "Hábitos todavía pendientes",
+                accentColor = MaterialTheme.colorScheme.secondary,
+            )
+        }
+        item {
+            AppStatCard(
                 title = "Progreso semanal",
                 value = "${uiState.progressSummary.weeklyProgressPercent}%",
                 subtitle = "${uiState.progressSummary.completedTasks} de ${uiState.progressSummary.totalTasks} tareas completadas",
